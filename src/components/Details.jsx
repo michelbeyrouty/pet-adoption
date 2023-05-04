@@ -10,7 +10,7 @@ import Modal from "./Modal";
 const Details = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  const [_, setAdoptedPet] = useContext(AdoptedPetContext); // eslint-disable-line no-unused-vars
+  const [_, setAdoptedPet] = useContext(AdoptedPetContext); // this returns the value passed in App
   const { id } = useParams();
   const results = useQuery(["details", id], fetchPet);
 

@@ -22,6 +22,7 @@ const App = () => {
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <AdoptedPetContext.Provider value={adoptedPet}>
+          {/* If context becomes bigger just use redux */}
           <header>
             <Link to="/">Adopt Me</Link>
           </header>

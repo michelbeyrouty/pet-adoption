@@ -3,11 +3,9 @@ const fetchPet = async ({ queryKey }) => {
 
     const response = await fetch(`http://pets-v2.dev-apis.com/pets?id=${id}`);
 
-    if (response.ok) {
+    if (!response.ok) {
         throw new Error(`Failed to fetch pet using ${id}`)
     }
-
-    // const jsonResponse = await response.json();
 
     return await response.json();
 }
